@@ -3,9 +3,24 @@
 // [LocalStorage adapter](backbone-localstorage.html)
 // to persist Backbone models within your browser.
 
+var options = {
+	key : "30467c05e5c9f3ebcae811c1a915c21c", 
+	secret : "ed931e5c0e4558aa11b7a2cc3f82d41b"
+};
+
 // Load the application once the DOM is ready, using `jQuery.ready`:
 $(function(){
+	
+	var App;
+	
+    //connect backend
+	crudr.connect( options, function(){
+    	
+	  // Finally, we kick things off by creating the **App**.
+	  App = new AppView;
 
+	});
+	
   // Todo Model
   // ----------
 
@@ -236,8 +251,5 @@ $(function(){
     }
 
   });
-
-  // Finally, we kick things off by creating the **App**.
-  var App = new AppView;
 
 });
