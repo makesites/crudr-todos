@@ -2,20 +2,26 @@
 // [Jérôme Gravel-Niquet](http://jgn.me/). This demo uses the
 // [CRUDr plugin](https://gist.github.com/2965050)
 // to persist Backbone models and update realtime with other users.
-
+/*
 var options = {
 	key : "30467c05e5c9f3ebcae811c1a915c21c", 
 	secret : "ed931e5c0e4558aa11b7a2cc3f82d41b"
 };
-
+*/
+var options = {
+	auth : false
+};
 // Load the application once the DOM is ready, using `jQuery.ready`:
 $(function(){
 	
-	var App;
+	var App, Todos;
 	
     //connect backend
 	crudr.connect( options, function(){
     	
+	  // Create our global collection of **Todos**.
+	  Todos = new TodoList;
+
 	  // Finally, we kick things off by creating the **App**.
 	  App = new AppView;
 
@@ -88,11 +94,8 @@ $(function(){
     comparator: function(todo) {
       return todo.get('order');
     }
-
+	
   });
-
-  // Create our global collection of **Todos**.
-  var Todos = new TodoList;
 
   // Todo Item View
   // --------------
