@@ -198,6 +198,7 @@ $(function(){
 
       this.listenTo(Todos, 'add', this.addOne);
       this.listenTo(Todos, 'reset', this.addAll);
+      this.listenTo(Todos, 'remove', this.delOne);
       this.listenTo(Todos, 'all', this.render);
 
       this.footer = this.$('footer');
@@ -236,6 +237,10 @@ $(function(){
       Todos.each(this.addOne);
     },
 
+    delOne: function(todo) {
+      todo.destroy();
+    },
+	
     // If you hit return in the main input field, create new **Todo** model,
     // persisting it to *CRUDr*.
     createOnEnter: function(e) {
