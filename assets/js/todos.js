@@ -9,7 +9,8 @@ var options = {
 };
 */
 var options = {
-	auth : false
+	key : "37fff53aeb6094f55b0328082aaf1de7",
+	log : true
 };
 // Load the application once the DOM is ready, using `jQuery.ready`:
 $(function(){
@@ -66,7 +67,7 @@ $(function(){
     model: Todo,
 
     // Save all of the todo items under the `"crudr_todos"` namespace.
-    backend: "crudr_todos",
+    backend: "demo_todos",
 	
 	initialize: function(){
             // setup the CRUDr backend
