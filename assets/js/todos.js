@@ -1,15 +1,9 @@
 // An example Backbone application contributed by
 // [Jérôme Gravel-Niquet](http://jgn.me/). This demo uses the
-// [CRUDr plugin](https://gist.github.com/2965050)
+// [Backbone.js plugin](https://gist.github.com/2965050)
 // to persist Backbone models and update realtime with other users.
-/*
 var options = {
-	key : "30467c05e5c9f3ebcae811c1a915c21c", 
-	secret : "ed931e5c0e4558aa11b7a2cc3f82d41b"
-};
-*/
-var options = {
-	key : "37fff53aeb6094f55b0328082aaf1de7",
+	key : "f5424914fd9959ae36ee5ffe5123bee8",
 	log : true
 };
 // Load the application once the DOM is ready, using `jQuery.ready`:
