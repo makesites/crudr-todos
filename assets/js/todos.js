@@ -2,17 +2,14 @@
 // [Jérôme Gravel-Niquet](http://jgn.me/). This demo uses the
 // [Backbone.js plugin](https://gist.github.com/2965050)
 // to persist Backbone models and update realtime with other users.
-var options = {
-	key : "f5424914fd9959ae36ee5ffe5123bee8",
-	log : true
-};
+
 // Load the application once the DOM is ready, using `jQuery.ready`:
 $(function(){
 	
 	var App, Todos;
 	
     //connect backend
-	crudr.connect( options, function(){
+	crudr.connect( config, function(){
     	
 	  // Create our global collection of **Todos**.
 	  Todos = new TodoList;
